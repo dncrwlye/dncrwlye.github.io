@@ -28,7 +28,8 @@
 
     body {
       font-family: var(--font-body);
-      background: var(--color-bg);
+      background: linear-gradient(to bottom, var(--color-bg) 0%, #6EB5CD 100%);
+      background-attachment: fixed;
       color: var(--color-text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -96,6 +97,27 @@
       font-size: 2.4rem;
       font-weight: 700;
       letter-spacing: -0.03em;
+      color: var(--color-text);
+    }
+
+    /* ---- SECTION DIVIDER ---- */
+    .section-divider {
+      max-width: 1100px;
+      margin: 0 auto 2.5rem;
+      padding: 0 2rem;
+    }
+
+    .section-divider hr {
+      border: none;
+      border-top: 2px solid var(--color-text);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-divider h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       color: var(--color-text);
     }
 
@@ -232,6 +254,8 @@
       .page-header { padding: 0 1.25rem; margin: 2rem auto 1.5rem; }
       .page-header h1 { font-size: 1.8rem; }
       .card-grid { padding: 0 1.25rem 3rem; grid-template-columns: 1fr; }
+      .section-divider { padding: 0 1.25rem; }
+      .section-divider h2 { font-size: 1.4rem; }
       footer { padding: 1.5rem 1.25rem; }
     }
 
@@ -253,6 +277,11 @@
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    /* Additional cards get a slightly faster animation */
+    .card-grid-additional .card {
+      animation-delay: 0.05s;
     }
   </style>
 </head>
@@ -355,6 +384,240 @@
         </div>
         <div class="card-title">Prioritizing surveillance of Nipah virus in India</div>
         <div class="card-description">After a surprising spillover event in India, we help prioritize future surveillance steps.</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ======== DIVIDER ======== -->
+  <div class="section-divider">
+    <hr>
+    <h2>Additional Publications</h2>
+  </div>
+
+  <div class="card-grid card-grid-additional">
+
+    <!-- Synchronized seasonal excretion — Nature Communications 2025 -->
+    <a class="card" href="https://doi.org/10.1038/s41467-025-61233-w" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">NC</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Nature Communications</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2025</span>
+        </div>
+        <div class="card-title">Synchronized seasonal excretion of multiple coronaviruses coincides with high rates of coinfection in immature bats</div>
+        <div class="card-description">Peel AJ, Ruiz-Aravena M, Kim K, Scherting B, Falvo CA, <strong>Crowley DE</strong>, et al.</div>
+      </div>
+    </a>
+
+    <!-- Jamaican fruit bats' competence for Ebola — Nature Communications 2025 -->
+    <a class="card" href="https://doi.org/10.1038/s41467-025-58147-0" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">NC</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Nature Communications</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2025</span>
+        </div>
+        <div class="card-title">Jamaican fruit bats' competence for Ebola but not Marburg virus is driven by intrinsic differences</div>
+        <div class="card-description">van Tol S, Port JR, Fischer RJ, Gallogly S, Bushmaker T, Griffin A, … <strong>Crowley DE</strong>, et al.</div>
+      </div>
+    </a>
+
+    <!-- Borrelia lineages — Emerging Infectious Diseases 2025 -->
+    <a class="card" href="https://doi.org/10.3201/eid3107.241675" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">EID</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Emerging Infectious Diseases</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2025</span>
+        </div>
+        <div class="card-title">Borrelia lineages adjacent to zoonotic clades in black flying foxes (Pteropus alecto), Australia, 2018–2020</div>
+        <div class="card-description">Verrett TB, Falvo CA, Benson E, Jones-Slobodian DN, <strong>Crowley DE</strong>, et al.</div>
+      </div>
+    </a>
+
+    <!-- Diet composition affects bat viral shedding — Proc Roy Soc B 2025 -->
+    <a class="card" href="https://doi.org/10.1098/rspb.2024.2808" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">PRSB</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Proceedings of the Royal Society B</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2025</span>
+        </div>
+        <div class="card-title">Diet composition affects bat viral shedding with potential consequences for pathogen spillover</div>
+        <div class="card-description">Vanalli C, Falvo C, <strong>Crowley D</strong>, Schwarz B, Plowright R, Hudson PJ, et al.</div>
+      </div>
+    </a>
+
+    <!-- Spatio-temporal dynamics of Hendra — 2025 -->
+    <a class="card" href="#" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">●</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Preprint</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2025</span>
+        </div>
+        <div class="card-title">Spatio-temporal dynamics of Hendra virus in Pteropus bats in Australia reveals high evolutionary diversity linked with spillover</div>
+        <div class="card-description">Munster V, Yinda CK, Eden JS, Prates E, Vlot A, Anzick S, Wang J, … <strong>Crowley DE</strong>, et al.</div>
+      </div>
+    </a>
+
+    <!-- Reconstructing prevalence dynamics — Peer Community Journal 2024 -->
+    <a class="card" href="https://doi.org/10.24072/pcjournal.478" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">PCJ</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Peer Community Journal</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2024</span>
+        </div>
+        <div class="card-title">Reconstructing prevalence dynamics of wildlife pathogens from pooled and individual samples</div>
+        <div class="card-description">Borremans B, Falvo CA, <strong>Crowley DE</strong>, Hoegh A, Lloyd-Smith JO, Peel AJ, et al.</div>
+      </div>
+    </a>
+
+    <!-- Antiviral responses in a Jamaican fruit bat organoid — Nature Communications 2023 -->
+    <a class="card" href="https://doi.org/10.1038/s41467-023-42314-y" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">NC</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Nature Communications</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2023</span>
+        </div>
+        <div class="card-title">Antiviral responses in a Jamaican fruit bat intestinal organoid model of SARS-CoV-2 infection</div>
+        <div class="card-description">Hashimi M, Sebrell TA, Hedges JF, Snyder D, Lyon KN, Byrum SD, … <strong>Crowley DE</strong>, et al.</div>
+      </div>
+    </a>
+
+    <!-- Periodic shifts in viral load — bioRxiv 2023 -->
+    <a class="card" href="https://doi.org/10.1101/2023.09.06.556454" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">●</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Preprint — bioRxiv</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2023</span>
+        </div>
+        <div class="card-title">Periodic shifts in viral load increase risk of spillover from bats</div>
+        <div class="card-description">Lunn TJ, Borremans B, Jones DN, Kessler MK, Dale AS, Yinda KC, … <strong>Crowley DE</strong>, et al.</div>
+      </div>
+    </a>
+
+    <!-- Hybrid correlative-mechanistic — Journal of Biogeography 2021 -->
+    <a class="card" href="https://doi.org/10.1111/jbi.14228" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">JB</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Journal of Biogeography</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2021</span>
+        </div>
+        <div class="card-title">A hybrid correlative–mechanistic approach for modeling winter distributions of North American bat species</div>
+        <div class="card-description">McClure ML, Haase CG, Hranac CR, Hayman DTS, Dickson BG, … <strong>Crowley D</strong>, et al.</div>
+      </div>
+    </a>
+
+    <!-- Assessing White-nose Syndrome — 2021 -->
+    <a class="card" href="#" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">●</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Report</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2021</span>
+        </div>
+        <div class="card-title">Assessing White-nose Syndrome in the Context of Non-Stationary Conditions in an Advancing Continental Epidemic</div>
+        <div class="card-description">Olson SH, <strong>Crowley D</strong>, Dickson BG, Dzal YA, Fuller NW, Haase CG, et al.</div>
+      </div>
+    </a>
+
+    <!-- Linking surface and subterranean climate — Ecosphere 2020 -->
+    <a class="card" href="https://doi.org/10.1002/ecs2.3274" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">ECO</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Ecosphere</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2020</span>
+        </div>
+        <div class="card-title">Linking surface and subterranean climate: implications for the study of hibernating bats and other cave dwellers</div>
+        <div class="card-description">McClure ML, <strong>Crowley D</strong>, Haase CG, McGuire LP, Fuller NW, et al.</div>
+      </div>
+    </a>
+
+    <!-- Percolation models — Phil Trans B 2019 -->
+    <a class="card" href="https://doi.org/10.1098/rstb.2018.0331" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">PTB</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Phil. Trans. Royal Society B</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2019</span>
+        </div>
+        <div class="card-title">Percolation models of pathogen spillover</div>
+        <div class="card-description">Washburne AD, <strong>Crowley DE</strong>, Becker DJ, Manlove KR, Childs ML, et al.</div>
+      </div>
+    </a>
+
+    <!-- Phylofactorization — Ecological Monographs 2019 -->
+    <a class="card" href="https://doi.org/10.1002/ecm.1353" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">EM</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Ecological Monographs</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2019</span>
+        </div>
+        <div class="card-title">Phylofactorization: a graph partitioning algorithm to identify phylogenetic scales of ecological data</div>
+        <div class="card-description">Washburne AD, Silverman JD, Morton JT, Becker DJ, <strong>Crowley D</strong>, et al.</div>
+      </div>
+    </a>
+
+    <!-- Temporal and spatial limitations — Biology Letters 2019 -->
+    <a class="card" href="https://doi.org/10.1098/rsbl.2019.0423" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">BL</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Biology Letters</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2019</span>
+        </div>
+        <div class="card-title">Temporal and spatial limitations in global surveillance for bat filoviruses and henipaviruses</div>
+        <div class="card-description">Becker DJ, <strong>Crowley DE</strong>, Washburne AD, Plowright RK.</div>
+      </div>
+    </a>
+
+    <!-- Changing resource landscapes — Ann NY Acad Sci 2018 -->
+    <a class="card" href="https://doi.org/10.1111/nyas.13910" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">ANYAS</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">Ann. NY Academy of Sciences</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2018</span>
+        </div>
+        <div class="card-title">Changing resource landscapes and spillover of henipaviruses</div>
+        <div class="card-description">Kessler MK, Becker DJ, Peel AJ, Justice NV, Lunn T, <strong>Crowley DE</strong>, et al.</div>
+      </div>
+    </a>
+
+    <!-- Taxonomic patterns — PeerJ 2018 -->
+    <a class="card" href="https://doi.org/10.7717/peerj.5979" target="_blank" rel="noopener">
+      <div class="card-image-placeholder" style="background:linear-gradient(135deg,#1a5c46 0%,#0a3d2e 100%)">PJ</div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-journal">PeerJ</span>
+          <span class="card-dot"></span>
+          <span class="card-year">2018</span>
+        </div>
+        <div class="card-title">Taxonomic patterns in the zoonotic potential of mammalian viruses</div>
+        <div class="card-description">Washburne AD, <strong>Crowley DE</strong>, Becker DJ, Olival KJ, Taylor M, Munster VJ, et al.</div>
       </div>
     </a>
 
