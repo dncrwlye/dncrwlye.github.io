@@ -1,427 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel Crowley — Blog</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --color-bg: #6ECDB5;
-      --color-text: #0d2a20;
-      --color-text-secondary: #1e4a3a;
-      --color-accent: #0a3d2e;
-      --color-accent-light: rgba(255,255,255,0.25);
-      --color-card-bg: rgba(255,255,255,0.5);
-      --color-border: rgba(255,255,255,0.3);
-      --color-tag: #1a5c46;
-      --font-display: 'IBM Plex Sans', system-ui, sans-serif;
-      --font-body: 'IBM Plex Sans', system-ui, sans-serif;
-    }
+<!-- POST: Mt Hector Trip Report -->
+<div class="blog-post">
+  <div class="blog-date">May 4th 2026</div>
+  <h2>Mt Hector Trip Report</h2>
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+  <p><strong>Conditions:</strong> Lake Louise &mdash; high of 20&deg;C with 15 km/h winds.</p>
 
-    body {
-      font-family: var(--font-body);
-      background: linear-gradient(to bottom, var(--color-bg) 0%, #6EB5CD 100%);
-      background-attachment: fixed;
-      color: var(--color-text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
+  <h3>Timeline</h3>
 
-    /* ---- NAV ---- */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 2rem 0;
-    }
-    nav .site-name {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--color-text);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-    nav .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-    nav .nav-links a {
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: var(--color-text-secondary);
-      text-decoration: none;
-      transition: color 0.2s;
-      position: relative;
-    }
-    nav .nav-links a:hover,
-    nav .nav-links a.active {
-      color: var(--color-accent);
-    }
-    nav .nav-links a.active::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--color-accent);
-      border-radius: 1px;
-    }
+  <p><strong>6:30 AM</strong> &mdash; Started skinning.</p>
 
-    /* ---- PAGE HEADER ---- */
-    .page-header {
-      max-width: 720px;
-      margin: 3rem auto 2.5rem;
-      padding: 0 2rem;
-    }
-    .page-header h1 {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-    }
+  <p><strong>7:00 AM</strong> &mdash; Arrived at the base of the waterfall.</p>
 
-    /* ---- BLOG POSTS ---- */
-    .blog-posts {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 2rem 4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.75rem;
-    }
+  <p><strong>8:00 AM</strong> &mdash; Got above the waterfall into the basin.</p>
+  <img src="images/IMG_4083.jpeg" alt="Above the waterfall, into the basin" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
 
-    .blog-post {
-      background: var(--color-card-bg);
-      border: 1px solid var(--color-border);
-      border-radius: 10px;
-      padding: 2rem;
-    }
+  <p><strong>9:30 AM</strong> &mdash; Above the first major slope; snack break at the base of Little Hector.</p>
+  <img src="images/IMG_4090.jpeg" alt="Snack break at Little Hector" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
 
-    .blog-date {
-      font-size: 0.8rem;
-      color: var(--color-tag);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 0.4rem;
-    }
+  <p><strong>10:44 AM</strong> &mdash; Roped up for glacier travel.</p>
+  <img src="images/IMG_4100.jpeg" alt="Roping up for the glacier" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
 
-    .blog-post h2 {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.01em;
-    }
+  <p><strong>1:00 PM</strong> &mdash; Left skis for the final climb.</p>
+  <img src="images/IMG_4104.jpeg" alt="Skis stashed for the final climb" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
 
-    .blog-post p {
-      font-size: 0.92rem;
-      color: var(--color-text-secondary);
-      line-height: 1.75;
-      margin-bottom: 0.75rem;
-    }
+  <p><strong>2:00 PM</strong> &mdash; Summit.</p>
+  <img src="images/IMG_4110.jpeg" alt="Mt Hector summit" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
 
-    .blog-post p:last-child {
-      margin-bottom: 0;
-    }
+  <p><strong>4:30 PM</strong> &mdash; Back at the car.</p>
+  <img src="" alt="Back at the car" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
 
-    .blog-post .attribution {
-      font-size: 0.85rem;
-      font-style: italic;
-      color: var(--color-tag);
-      margin-bottom: 1rem;
-    }
+  <h3>Snow Conditions</h3>
 
-    .blog-post a {
-      color: var(--color-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--color-accent-light);
-      transition: border-color 0.2s;
-    }
+  <p>Snow conditions were quite nice overall. Wet slides were our primary concern, especially given our slower-than-expected ascent. That said, you gain a lot of elevation on this route and the snow was firm at the summit. It softened up considerably around Little Hector, but we hadn't seen many signs of wet slides &mdash; though this would definitely be a concern on a warmer day.</p>
 
-    .blog-post a:hover {
-      border-color: var(--color-accent);
-    }
+  <p>The snow got fairly mushy below the waterfall on the way down. There's a decent risk of getting caught in a wet slide here, and the exposure above you is intimidating. Once you're in the gully, the shade holds the snow up well.</p>
 
-    /* ---- FOOTER ---- */
-    footer {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem;
-      border-top: 1px solid var(--color-border);
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-    footer a {
-      color: var(--color-text-secondary);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    footer a:hover { color: var(--color-accent); }
-    footer a svg { width: 20px; height: 20px; fill: currentColor; }
+  <h3>Route Notes</h3>
 
-    /* ---- RESPONSIVE ---- */
-    @media (max-width: 700px) {
-      nav { padding: 1.5rem 1.25rem 0; }
-      .page-header { padding: 0 1.25rem; margin: 2rem auto 1.5rem; }
-      .page-header h1 { font-size: 1.8rem; }
-      .blog-posts { padding: 0 1.25rem 3rem; }
-      .blog-post { padding: 1.5rem; }
-      footer { padding: 1.5rem 1.25rem; }
-    }
+  <p><strong>Getting past the waterfall</strong> took much longer than I expected. The snow was too hard to get an edge in &mdash; I'm on 108 underfoot Line Visions &mdash; but bootpacking didn't work either. The crust broke too easily into sugary, dry snow underneath, so you just postholed. <strong>Ski crampons were the way to go here.</strong></p>
+  <img src="images/IMG_4129.jpeg" alt="Frustrated by getting past the waterfall" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
 
-    /* ---- LOAD ANIMATION ---- */
-    .blog-post {
-      opacity: 0;
-      transform: translateY(16px);
-      animation: fadeUp 0.5s ease forwards;
-    }
-    .blog-post:nth-child(1) { animation-delay: 0.05s; }
-    .blog-post:nth-child(2) { animation-delay: 0.1s; }
-    .blog-post:nth-child(3) { animation-delay: 0.15s; }
+  <p>Above the waterfall there's a bit of scrambling. On the way down, however, you can pick a ski line through and across the waterfall. Highly recommend this approach &mdash; as long as there isn't too much water, it's fast and felt much safer than downclimbing the rock sections. You could also set up a tree anchor and rappel if you wanted.</p>
 
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body>
+  <p>We had a 70 m rope, which was helpful for rappelling off the anchors on Hector. There are two sets of anchors. If you have a long enough rope you can do a single rappel, which saves a lot of time with a larger group.</p>
 
-  <nav>
-    <a href="index.html" class="site-name">Daniel Crowley</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Publications</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="epi_resume.pdf" target="_blank">CV</a></li>
-      <li><a href="blog.html" class="active">Blog</a></li>
-    </ul>
-  </nav>
+  <img src="images/5124ecaa-7034-43e6-885d-1a8f34636a65.jpeg" alt="Rappel" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
 
-  <div class="page-header">
-    <h1>Blog</h1>
-  </div>
+  <h3>Gear</h3>
 
-  <div class="blog-posts">
+  <p>Line Vision 108 (186 cm), Petzl Quark ice tool, crampons, ski crampons (essential for this route), 70 m rope. 2 L of water was sufficient.</p>
 
-    <!--
-      HOW TO ADD A NEW POST:
-      Copy a blog-post block below, paste it at the TOP of this list,
-      and fill in the date, title, and content. Each post is wrapped
-      in a card automatically.
-    -->
+  <h3>One More Thing</h3>
 
-    <!-- POST 3 -->
-    <div class="blog-post">
-      <div class="blog-date">April 2nd 2026</div>
-      <h2>Recent Thoughts: <em>Everyone Who Is Gone Is Here</em> by Jonathan Blitzer</h2>
+  <p>Wide skis are a real pain on hardpack. I knew this, but I'd always skied with folks on similar widths. Now I'm out with Europeans on skinny skis, and watching them hold an edge while skinning up hardpack is genuinely frustrating.</p>
 
- <p>I just finished <em>Everyone Who Is Gone Is Here</em>, Jonathan Blitzer's book on the humanitarian crisis in Central America and at the US border. I'll keep this fairly brief.</p>
-
-  <p>First, Blitzer does a commendable job diving into the lives of several immigrants and their stories. These stories were challenging to read, especially Juan Romagoza's account of being tortured at the hands of the Salvadoran government (often bankrolled by the US government). The book is worth reading for these stories alone.</p>
-
-  <p>The book did diverge from my expectations at times. Primarily, Blitzer gives little space to the United States' motivations for propping up these Central American governments. Having just read <em>The Prize</em> by Daniel Yergin, I gained a nuanced understanding of why the U.S. has engaged in specific interventions&mdash;the Mossadegh coup, for example. You read <em>The Prize</em> and you understand the decision-making behind that coup. You may disagree with the reasoning (it's easy to judge that decision fifty years later), but at least I understood the pressure the US government felt about letting the Iranian government fall into Soviet hands.</p>
-
-  <p>For Central America, I didn't get that from Blitzer's book. Now, I'm sure Blitzer would argue that's beyond the scope of the book and that, frankly, who cares about the Reagan administration's misguided strategies. Blitzer cares about the results, not the why behind the policy. But the book certainly does dive deeply into the people making policy decisions over the last twenty-five years. I would argue that if we, the readers, had time to learn about Rahm Emanuel's rants about immigration politics, Blitzer could have taken some time to discuss <em>why</em> the U.S. was engaged in such a counterproductive Latin America strategy. What were the goals? It likely boils down to stopping communism in our backyard, but I'm sure there are nuances here.</p>
-
-  <p><strong>Other takeaways:</strong> Last year, I listened to Alejandro Mayorkas describe an almost memetic spread of the idea that the refugee program could be gamed by Latin Americans. While I am sure there is some truth to this "gaming the system" theory, if you read Blitzer's book, you realize it is a massive oversimplification. Blitzer convinced me that the reason we've shifted to families crossing the border is the destabilization of their home countries. It is gangs destabilizing these countries now, and it was government death squads in the '80s. We had waves of families then, too, seeking to use the refugee program. Essentially, families don't want to make this trip. They want to stay. "Making a better life for themselves in America" is something men are doing. "Avoiding getting killed or forced into a gang" is something families are doing.</p>
-  
-    </div>
-
-
-        <!-- POST 2 -->
-    <div class="blog-post">
-      <div class="blog-date">March 15th 2026</div>
-      <h2>"You, Me, and Your AI Writing Assistant "</h2>
-
-  <p>Yesterday, I heard Michael Pollan (patron saint of the Bay Area) discuss his new book. Pollan mentioned reader and writer relationship as akin to a shared consciousness - the reader gets into the head of the author. For non-fiction, we integrate the author's ideas, for fiction, we create our own images of the author's characters.</p>
-
-  <p>I am not convinced this is a shared consciousness. But I think it's close to what happens when I read my favorite authors. I pick up a David Sedaris book and immediately hear his voice inside my head. I understand his style, his sensibilities, what he finds funny about his world. This might be the start of a shared consciousness.  I experience this not just with well-known authors, but with my friends and colleagues. I go on Slack, I can hear my colleagues' voices in their messages and can usually guess what they are going to say next.</p>
-
-  <p>Which is why it was jarring reading a friend's recent writing. He has a distinct voice and style in all things he does (he is a 'character', you might say). But I did not hear his voice at all in his recent writing. Instead, I heard this synthetic and off-putting voice, one I've started to associate with LinkedIn posts.</p>
-
-  <p>By LinkedIn-esque, I don't mean professional; I mean that it was clearly AI-generated. Not "slop", but more of a moving average. The outliers and idiosyncrasies in his writing were melted down into a new collective internet voice.</p>
-
-  <p>What I found interesting was that his voice occasionally pushed back. I heard him once or twice, like a radio coming in tune. I assume this was him re-editing what the AI had returned to him.</p>
-
-  <p>What does this mean for our consciousness-sharing? I think it means it is now depersonalized. This intimate experience between reader and writer is still there, sort of. But it's changed&mdash;changed into an uninvited and unwelcome throuple with Claude.</p>
-
-  <p>Clearly I am being negative here. But I do not see this as purely negative.</p>
-
-  <p>Realistically, most writing I engage with is mediocre. No topic sentences, rambling, and poorly structured. AI makes this writing much less distinct, but it also makes it clearer and more legible&mdash;thanks to the liberal use of em dashes. So, AI can raise the floor.</p>
-
-  <p>Is this floor raising a good thing? Probably not! People should work on improving their writing. Both for the sake of personal improvement, but also because writing is thinking. If you offload your writing, you offload your thinking, and that will creep into dumbing down your work.</p>
-
-  <p>Unfortunately, I think we're moving toward a monoculture. AI elevates some of our writing and probably makes us dumber. At the same time, AI functions as sandpaper, removing the interesting idiosyncrasies and outliers among us.</p>
-
-
-    </div>
-    
-    <!-- POST 1 -->
-    <div class="blog-post">
-      <div class="blog-date">March 2026</div>
-      <h2>My Thoughts on AI</h2>
-
-      <p>My friend and colleague Manuel Ruiz-Aravena has started a <a href="https://manuelruizaravena.substack.com/">blog on AI</a>. I thought I would share my thoughts as well for my dozens of readers!</p>
-
-      <h3>This Website</h3>
-
-      <p>I created this website with Claude Code. I mostly ripped off <a href="https://www.samlearner.com/work">samlearner.com</a> because I appreciate Sam's layout. I adjusted the colors and chose celeste. In the AI optimist's world, this is called "taste" and it's all humans have left to offer. But from what I can tell, most humans (myself included) have pretty basic taste. We all want Scandinavian-style coffee shops with polished concrete floors and big exposed air duct systems in the ceiling.</p>
-
-      <p>My point is: when it comes to this website, I am bringing nothing to the table. No HTML skills, no taste, no design. But here it is! Clearly, AI can generate a decent facsimile of a great website.</p>
-
-      <h3>But What Can It <em>Not</em> Do?</h3>
-
-      <p>This is what I've been struggling with. Sometimes I'm convinced there's no need for me at all. Last year, I applied to be an electrician's apprentice.</p>
-
-      <p>But lately, I've noticed that I'm not really getting any more productive. If AI can replace me, then why can't I get it to replace me? I try using Claude agentically all the time, but it is not really working for me.</p>
-
-      <p>It's not even the "edge cases" it fails on. It's not even "ooh, all the busy work is done, all that's left for me are the really tough cognitive problems." No, I can't get it to do any of my work for me. A website, sure, I don't know anything about that. But when it comes to my day-to-day, it's not speeding me up. Here are the two main categories it seems to break:</p>
-
-      <p><strong>Writing from scratch.</strong> Having Claude write something from scratch doesn't really work for me. It has this odd tendency to want to make big, bold statements. In science, we usually don't have big, bold conclusions. If I let it control this aspect of my work, it would probably apply for the Nobel Prize based on the amazing revelations we've found in wastewater. If I slightly push back, it goes the opposite direction — suddenly we've made incremental progress on a project nobody cares about. It's a real Jekyll and Hyde situation.</p>
-
-      <p><strong>Code.</strong> The larger the code request, the worse the code gets. I find it generates these massive "mega-functions," as I'll call them. I like functions. I'm not a trained software engineer, but my preference is for lots of small 'mono-tasker' functions that live in a separate file I usually call <code>useful_functions.R</code> or <code>project_tools.py</code>. When I let Claude cook, it likes to make one mega-function that cleans my data and runs a Stan model all at once. If it breaks, I can never figure out where or why, and it's just kind of useless. Given lots of minor tasks, though, it does a decent job.</p>
-
-      <h3>Where AI Shines: Interactive Use</h3>
-
-      <p>Now, Claude as an interactive tool does speed me up.</p>
-
-      <p>The most impressed I've been by any AI tool was ChatGPT-4 last year. We were applying for a complex, multidisciplinary grant. NSF wanted everything neatly woven together — everyone's science feeding in everywhere. It's the kind of work that's really hard to organize, especially over Zoom. I fed the grant into ChatGPT-4 and it was able to see and make the connections really quickly. It's sort of the perfect use case: consume a massive amount of poorly written draft text, draw on a general knowledge base, and identify the specific sections where we can link the disciplines together.</p>
-
-      <p>Here's how I use AI today. I write an outline by hand. I take a photo of that outline or transcribe it. I say, "Claude, turn this into a draft." I print out the draft, edit it by hand, make the edits in the document, and do a final Claude pass for typos. I think it works great. I get physical printouts, which I like — it lessens screen time, makes it easier for me to focus, and something about paper just feels good. And I get Claude to turn outlines into paragraphs, which I've always struggled with.</p>
-
-      <p>I think my work is improving due to AI. The quality of drafts, the code annotation, the figures. It does help with the mundane tasks I struggle to motivate myself to do. So, while I'm deeply paranoid it will replace me and I'll end up homeless, I don't see that happening this year at least. Maybe I'll be wrong!</p>
-    </div>
-
-    <!-- POST 2 -->
-    <div class="blog-post">
-      <div class="blog-date">January 2026</div>
-      <h2>One Bat After Another: Does the Annual Arrival of Baby Bats Lead to Hendra Virus Spillover?</h2>
-      <p class="attribution">
-        I took this from the Journal of Animal Ecology Blog, check the original there:
-        <a href="https://animalecologyinfocus.com/2026/02/04/one-bat-after-another-does-the-annual-arrival-of-baby-bats-lead-to-hendra-virus-spillover/">animalecologyinfocus.com</a>
-      </p>
-      <p>
-        This blog post is provided by Dan Crowley and tells the #StoryBehindThePaper for the article
-        "Cohorts of immature Pteropus bats show interannual variation in Hendra virus serology",
-        which was recently published in Journal of Animal Ecology. Every winter, Hendra virus spills
-        over from Australian flying foxes to horses and humans. The authors of this study spent four
-        years tracking juvenile bats to test whether they drive these seasonal outbreaks.
-      </p>
-      <p>
-        Every November, hundreds of thousands of flying fox bats are born on the east coast of
-        Australia. Like all mammals, we assume these bats are born with their mother's antibodies—proteins
-        that provide critical protection against pathogens. While this has long been an assumption, we
-        really understand very little about how these bats protect themselves against pathogens.
-      </p>
-      <p>
-        Most mammals receive antibodies from their mother and these wane over the first year of life.
-        As these antibodies wane, the vulnerability to pathogens increases. Until the immune system
-        matures and generates endogenous antibodies, young mammals exist in this window of susceptibility.
-      </p>
-      <p>
-        For many populations, the sudden pulse of susceptible individuals after a synchronized birth
-        pulse has dramatic impacts on pathogen dynamics. For flying foxes, we were particularly
-        interested in how this influx of susceptible individuals would impact Hendra virus dynamics.
-        Hendra virus is a harmless pathogen for these bats, but it often "spills over" to horses and
-        humans (cross species transmission), where it can be deadly.
-      </p>
-      <p>
-        We suspected Hendra virus dynamics might be driven, in part, by this influx of susceptible
-        juveniles. Hendra virus spillover events tend to occur in winter. This is also when we
-        predicted these juvenile bats would lose their maternal antibodies. If there was a synchronized
-        waning event, this could introduce sufficient susceptible individuals into the population to
-        cause a spike in transmission.
-      </p>
-      <p>
-        However, more happens in winter than just waning maternal antibodies. While Hendra virus
-        spillover events occur in winter, they are especially common in winters with insufficient food.
-        It was previously suggested that adult bats are starving and immunocompromised, unable to
-        control Hendra virus replication, and shedding the virus in their urine—which then infects horses.
-      </p>
-      <p>
-        So, which matters more: the juveniles, or the food shortages? This question had not yet been
-        investigated.
-      </p>
-      <p>
-        New serological tools and statistical methods let us tackle this question directly. By sampling
-        Australian flying foxes over several birth cohorts, we tracked how antibodies developed in
-        juveniles as they aged, data that's normally out of reach in wild populations.
-      </p>
-      <p>
-        So, what did we find? We didn't see the clean signal we expected: no consistent maternal
-        antibody waning, and more strikingly, no clear wave of juveniles generating their own
-        antibodies as they became exposed. These results were confusing and unexpected.
-      </p>
-      <p>
-        Fortunately, we also had data on Bartonella, a bacterial infection transmitted by bat flies.
-        Bartonella became our control, a way to measure what "normal" transmission looks like in these
-        bats. Like Hendra, it requires close contact to spread.
-      </p>
-      <p>
-        Unlike Hendra, Bartonella was remarkably consistent across cohorts. Every year, juveniles were
-        born uninfected, and by about nine months of age, nearly all had acquired it—at the same rate,
-        year after year. This told us something important: the inconsistency in Hendra wasn't because
-        bats were behaving differently. Contact opportunities were stable. Something else was driving
-        the variation.
-      </p>
-      <p>
-        So, what does this mean for Hendra virus spillovers? We didn't find a clear window of
-        susceptibility in winter that could be driving spillover events. The lack of synchronized
-        seroconversion suggests juveniles aren't playing a major role in Hendra transmission. Together,
-        these results point us back to the food shortage hypothesis. It appears that adults, not
-        juveniles, are the drivers of Hendra virus shedding. While additional work is needed to
-        establish food shortage as the causal trigger, this study represents one more step towards
-        understanding the mechanisms driving viral shedding in this complex system.
-      </p>
-      <p>
-        Read the paper:
-        <a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2656.70213">
-          besjournals.onlinelibrary.wiley.com
-        </a>
-      </p>
-    </div>
-
-    <!-- POST 3 -->
-    <div class="blog-post">
-      <div class="blog-date">December 2025</div>
-      <h2>Placeholder</h2>
-      <p>
-        ...
-      </p>
-    </div>
-
-  </div>
-
-  <footer>
-    <a href="https://github.com/dncrwlye" title="GitHub">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-    </a>
-    <a href="https://bsky.app/profile/dancrowley.bsky.social" title="Bluesky">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.643 3.593 3.519 6.178 3.279-4.398.672-7.292 2.9-4.09 8.026C5.236 22.16 6.638 21.93 12 18c5.362 3.93 6.837 4.37 9.288.552 3.202-5.126.308-7.354-4.09-8.026 2.585.24 5.393-.636 6.178-3.279C23.622 9.419 24 4.458 24 3.768c0-.688-.139-1.86-.902-2.203-.659-.3-1.664-.62-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z"/></svg>
-    </a>
-    <a href="https://www.linkedin.com/in/danielewingcrowley/" title="LinkedIn">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-    </a>
-    <a href="https://orcid.org/0000-0003-4262-253X" title="ORCID">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-1.847-1.303-3.722-3.953-3.722h-2.366z"/></svg>
-    </a>
-  </footer>
-
-  <script data-goatcounter="https://danielcrowley.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
-
-</body>
-</html>
+</div>
