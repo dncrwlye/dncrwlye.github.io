@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel Crowley — Select Publications</title>
+  <title>Daniel Crowley — About</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -20,11 +20,7 @@
       --font-body: 'IBM Plex Sans', system-ui, sans-serif;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: var(--font-body);
@@ -44,7 +40,6 @@
       margin: 0 auto;
       padding: 2rem 2rem 0;
     }
-
     nav .site-name {
       font-family: var(--font-display);
       font-size: 1.35rem;
@@ -53,13 +48,11 @@
       text-decoration: none;
       letter-spacing: -0.02em;
     }
-
     nav .nav-links {
       display: flex;
       gap: 2rem;
       list-style: none;
     }
-
     nav .nav-links a {
       font-size: 0.92rem;
       font-weight: 500;
@@ -68,12 +61,10 @@
       transition: color 0.2s;
       position: relative;
     }
-
     nav .nav-links a:hover,
     nav .nav-links a.active {
       color: var(--color-accent);
     }
-
     nav .nav-links a.active::after {
       content: '';
       position: absolute;
@@ -85,173 +76,129 @@
       border-radius: 1px;
     }
 
-    /* ---- HEADER ---- */
-    .page-header {
+    /* ---- ABOUT LAYOUT ---- */
+    .about-container {
       max-width: 1100px;
-      margin: 3rem auto 2.5rem;
+      margin: 3rem auto 4rem;
       padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3.5rem;
+      align-items: start;
     }
 
-    .page-header h1 {
+    .about-sidebar {
+      text-align: center;
+    }
+
+    .about-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-border);
+      margin-bottom: 1.25rem;
+      background: var(--color-accent-light);
+    }
+
+    .about-photo-placeholder {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0a3d2e, #1a5c46);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      font-size: 4rem;
+      color: rgba(255,255,255,0.7);
+      border: 3px solid var(--color-border);
+    }
+
+    .about-name {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .about-role {
+      font-size: 0.88rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .about-contact {
+      list-style: none;
+      font-size: 0.85rem;
+    }
+
+    .about-contact li {
+      margin-bottom: 0.4rem;
+    }
+
+    .about-contact a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .about-contact a:hover {
+      color: var(--color-text);
+    }
+
+    /* ---- MAIN CONTENT ---- */
+    .about-content h1 {
       font-family: var(--font-display);
       font-size: 2.4rem;
       font-weight: 700;
       letter-spacing: -0.03em;
-      color: var(--color-text);
-    }
-
-    .page-header p.tagline {
-      margin-top: 0.85rem;
-      font-size: 1.02rem;
-      color: var(--color-text-secondary);
-      line-height: 1.6;
-      max-width: 760px;
-    }
-
-    /* ---- SECTION DIVIDER ---- */
-    .section-divider {
-      max-width: 1100px;
-      margin: 0 auto 2.5rem;
-      padding: 0 2rem;
-    }
-
-    .section-divider hr {
-      border: none;
-      border-top: 2px solid var(--color-text);
       margin-bottom: 1.5rem;
     }
 
-    .section-divider h2 {
+    .about-content h2 {
       font-family: var(--font-display);
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
       color: var(--color-text);
     }
 
-    /* ---- CARD GRID ---- */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.75rem;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 2rem 4rem;
+    .about-content p {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      max-width: 640px;
     }
 
-    .card {
-      background: var(--color-card-bg);
-      border: 1px solid var(--color-border);
-      border-radius: 10px;
-      overflow: hidden;
+    .about-content a {
+      color: var(--color-accent);
       text-decoration: none;
-      color: inherit;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border-bottom: 1px solid var(--color-accent-light);
+      transition: border-color 0.2s;
+    }
+
+    .about-content a:hover {
+      border-color: var(--color-accent);
+    }
+
+    .interest-tags {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-    }
-
-    .card-image {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      border-bottom: 1px solid var(--color-border);
+    .interest-tag {
       background: var(--color-accent-light);
-    }
-
-    .card-body {
-      padding: 1.25rem 1.4rem 1.5rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .card-journal {
-      font-size: 0.78rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--color-tag);
-    }
-
-    .card-year {
-      font-size: 0.75rem;
-      color: var(--color-text-secondary);
-    }
-
-    .card-dot {
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: var(--color-text-secondary);
-    }
-
-    .card-title {
-      font-family: var(--font-display);
-      font-size: 1.08rem;
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
-    }
-
-    .card-description {
-      font-size: 0.85rem;
-      color: var(--color-text-secondary);
-      line-height: 1.55;
-      flex: 1;
-    }
-
-    /* ---- THEMATIC SECTION BOX ---- */
-    .thematic-section {
-      max-width: 1100px;
-      margin: 0 auto 2.5rem;
-      padding: 0 2rem;
-    }
-
-    .thematic-box {
-      border: 2px solid var(--color-text);
-      border-radius: 6px;
-      padding: 2rem;
-    }
-
-    .thematic-header {
-      margin-bottom: 1.5rem;
-    }
-
-    .thematic-header h3 {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--color-text);
-      margin-bottom: 0.4rem;
-    }
-
-    .thematic-header p {
-      font-size: 0.88rem;
-      color: var(--color-text-secondary);
-      line-height: 1.55;
-      max-width: 800px;
-      font-style: italic;
-    }
-
-    .thematic-box .card-grid {
-      padding: 0;
-      margin: 0;
-      max-width: none;
+      color: var(--color-accent);
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 500;
     }
 
     /* ---- FOOTER ---- */
@@ -264,7 +211,6 @@
       justify-content: center;
       gap: 1.5rem;
     }
-
     footer a {
       color: var(--color-text-secondary);
       text-decoration: none;
@@ -272,519 +218,123 @@
       font-weight: 500;
       transition: color 0.2s;
     }
-
-    footer a:hover {
-      color: var(--color-accent);
-    }
-
-    footer a svg {
-      width: 20px;
-      height: 20px;
-      fill: currentColor;
-    }
+    footer a:hover { color: var(--color-accent); }
+    footer a svg { width: 20px; height: 20px; fill: currentColor; }
 
     /* ---- RESPONSIVE ---- */
     @media (max-width: 700px) {
       nav { padding: 1.5rem 1.25rem 0; }
-      .page-header { padding: 0 1.25rem; margin: 2rem auto 1.5rem; }
-      .page-header h1 { font-size: 1.8rem; }
-      .page-header p.tagline { font-size: 0.95rem; }
-      .card-grid { padding: 0 1.25rem 3rem; grid-template-columns: 1fr; }
-      .section-divider { padding: 0 1.25rem; }
-      .section-divider h2 { font-size: 1.4rem; }
-      .thematic-section { padding: 0 1.25rem; }
-      .thematic-box { padding: 1.25rem; }
-      .thematic-box .card-grid { padding: 0; grid-template-columns: 1fr; }
+      .about-container {
+        grid-template-columns: 1fr;
+        padding: 0 1.25rem;
+        margin: 2rem auto 3rem;
+        gap: 2rem;
+      }
+      .about-content h1 { font-size: 1.8rem; }
       footer { padding: 1.5rem 1.25rem; }
     }
 
     /* ---- LOAD ANIMATION ---- */
-    .card {
+    .about-container {
       opacity: 0;
       transform: translateY(16px);
       animation: fadeUp 0.5s ease forwards;
+      animation-delay: 0.05s;
     }
-    .card:nth-child(1) { animation-delay: 0.05s; }
-    .card:nth-child(2) { animation-delay: 0.1s; }
-    .card:nth-child(3) { animation-delay: 0.15s; }
-    .card:nth-child(4) { animation-delay: 0.2s; }
-    .card:nth-child(5) { animation-delay: 0.25s; }
-    .card:nth-child(6) { animation-delay: 0.3s; }
-
     @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-
 <body>
 
   <nav>
     <a href="index.html" class="site-name">Daniel Crowley</a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Publications</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="index.html" class="active">About</a></li>
       <li><a href="epi_resume.pdf" target="_blank">CV</a></li>
       <li><a href="blog.html">Blog</a></li>
     </ul>
   </nav>
 
-  <!-- ======== TOP PAPERS ======== -->
+  <div class="about-container">
 
-  <div class="thematic-section" style="margin-top: 3rem;">
-    <div class="thematic-box">
-      <div class="page-header">
-        <h1>Select Publications</h1>
-        <p class="tagline">
-          Computational epidemiologist. The projects below reflect three themes I work on: the epidemiology of zoonotic disease, infection biology in non-model species, and methods development for messy surveillance data.
-        </p>
+    <!-- SIDEBAR -->
+    <div class="about-sidebar">
+      <img class="about-photo" src="images/2019-12-23 08.00.49.jpg" alt="Daniel Crowley">
+      <div class="about-name">Daniel Crowley</div>
+      <div class="about-role">
+        Computational epidemiologist<br>
+      </div>
+      <ul class="about-contact">
+        <li><a href="mailto:dancrowley.e@gmail.com">dancrowley.e@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="about-content">
+      <h1>About</h1>
+
+      <p>
+        I&rsquo;m an epidemiologist working at the intersection of infectious disease, immunology, and statistical modeling.
+      </p>
+
+      <p>
+        For a decade I studied pathogen spillover (how viruses jump from wildlife to humans), combining fieldwork, experimental immunology, and computational modeling. I completed my PhD in Immunology and Infectious Diseases at Cornell University, advised by Raina Plowright, and hold an MPH in Epidemiology and Biostatistics from Columbia University.
+      </p>
+
+      <p>
+        I moved into AMR for a few reasons. The genetics of resistance are complex and surveillance is still nascent  (there&rsquo;s room to build). The work uses my modeling and surveillance skills directly, while letting me grow the bioinformatics side. And it&rsquo;s a problem closer to home than spillover: a steady, present-day threat rather than a rare, hard-to-predict event.
+      </p>
+
+      <p>
+        Since 2025, I&rsquo;ve been based in Calgary working on antimicrobial resistance surveillance in the healthcare system. Right now, I&rsquo;m building Bayesian models that link wastewater data to clinical case data to track resistant organisms and respiratory pathogens across hospitals and municipalities. The goal is to give public health agencies and healthcare workers earlier, better information about how these pathogens are spreading.
+      </p>
+
+      <h2>Scientific Philosophy</h2>
+
+      <p>
+        I try to work across disciplines through an iterative process: collecting real-world evidence, building mechanistic models to explain observations, then testing those mechanisms experimentally. I think this produces the best work, and it keeps things more interesting.
+      </p>
+
+      <h2>Technical Skills</h2>
+
+      <div class="interest-tags">
+        <span class="interest-tag">R (10+ years)</span>
+        <span class="interest-tag">Python</span>
+        <span class="interest-tag">Stan / CmdStanR</span>
+        <span class="interest-tag">Bayesian Modeling</span>
+        <span class="interest-tag">Machine Learning</span>
+        <span class="interest-tag">HPC / Linux</span>
+        <span class="interest-tag">NGS / Bioinformatics</span>
+        <span class="interest-tag">Git</span>
       </div>
 
-      <div class="card-grid">
+      <h2>Research Interests</h2>
 
-    <a class="card" href="https://doi.org/10.1111/1365-2656.70213" target="_blank" rel="noopener">
-      <img class="card-image" src="images/final_fig_1_cropped.png" alt="Pteropus bat with offspring">
-      <div class="card-body">
-        <div class="card-meta">
-          <span class="card-journal">Journal of Animal Ecology</span>
-          <span class="card-dot"></span>
-          <span class="card-year">2025</span>
-        </div>
-        <div class="card-title">Cohorts of immature Pteropus bats show interannual variation in Hendra virus serology</div>
-        <div class="card-description">Bayesian surveillance models on longitudinal serological data identify high-risk windows for viral emergence.</div>
+      <div class="interest-tags">
+        <span class="interest-tag">Epidemiology</span>
+        <span class="interest-tag">Immunology</span>
+        <span class="interest-tag">Antimicrobial Resistance</span>
+        <span class="interest-tag">Pathogen Spillover</span>
+        <span class="interest-tag">Wastewater Surveillance</span>
+        <span class="interest-tag">One Health</span>
       </div>
-    </a>
 
-    <a class="card" href="https://doi.org/10.1371/journal.pbio.3002800" target="_blank" rel="noopener">
-      <img class="card-image" src="images/journal.pbio.3002800.g001.PNG" alt="Antibody diversity figure">
-      <div class="card-body">
-        <div class="card-meta">
-          <span class="card-journal">PLOS Biology</span>
-          <span class="card-dot"></span>
-          <span class="card-year">2024</span>
-        </div>
-        <div class="card-title">Bats generate lower affinity but higher diversity antibody responses than those of mice, but pathogen-binding capacity increases if protein is restricted in their diet</div>
-        <div class="card-description">Bayesian models of immune dynamics applied to high-throughput sequencing in a non-model reservoir host.</div>
-      </div>
-    </a>
+      <h2>Education</h2>
 
-    <a class="card" href="https://doi.org/10.3390/vaccines8020228" target="_blank" rel="noopener">
-      <img class="card-image" src="images/ecm1353-fig-0004-m.jpg" alt="Reservoir phylogeny figure">
-      <div class="card-body">
-        <div class="card-meta">
-          <span class="card-journal">Vaccines</span>
-          <span class="card-dot"></span>
-          <span class="card-year">2020</span>
-        </div>
-        <div class="card-title">Identifying Suspect Bat Reservoirs of Emerging Infections</div>
-        <div class="card-description">Machine learning and phylogenetic methods to predict animal reservoirs of Ebola and the henipaviruses from trait and genomic data.</div>
-      </div>
-    </a>
+      <p>
+        PhD in Immunology and Infectious Diseases &mdash; Cornell University<br>
+        MPH in Epidemiology and Biostatistics &mdash; Columbia University
+      </p>
 
-    <a class="card" href="https://doi.org/10.1038/s41579-021-00652-2" target="_blank" rel="noopener">
-      <img class="card-image" src="images/41579_2021_652_Fig2_HTML.png" alt="Coronavirus spillover pathways figure">
-      <div class="card-body">
-        <div class="card-meta">
-          <span class="card-journal">Nature Reviews Microbiology</span>
-          <span class="card-dot"></span>
-          <span class="card-year">2022</span>
-        </div>
-        <div class="card-title">Ecology, evolution and spillover of coronaviruses from bats</div>
-        <div class="card-description">A synthesis of the ecology, evolution, and emergence pathways of the coronavirus family.</div>
-      </div>
-    </a>
+      <p style="margin-top: 1.5rem;">
+        <a href="epi_resume.pdf" target="_blank" style="font-weight: 600;">Download full CV (PDF) &rarr;</a>
+      </p>
 
-    <a class="card" href="https://doi.org/10.1098/rspb.2024.2482" target="_blank" rel="noopener">
-      <img class="card-image" src="images/rspb.2024.2482.f001.png" alt="Diet and shedding figure">
-      <div class="card-body">
-        <div class="card-meta">
-          <span class="card-journal">Proceedings of the Royal Society B</span>
-          <span class="card-dot"></span>
-          <span class="card-year">2025</span>
-        </div>
-        <div class="card-title">Diet-induced changes in metabolism influence immune response and viral shedding in Jamaican fruit bats</div>
-        <div class="card-description">Controlled experiments linking host metabolic state to viral shedding &mdash; a mechanistic input to spillover risk models.</div>
-      </div>
-    </a>
-
-    <a class="card" href="https://doi.org/10.1371/journal.pntd.0007393" target="_blank" rel="noopener">
-      <img class="card-image" src="images/pntd.0007393.g001.png" alt="Nipah surveillance map">
-      <div class="card-body">
-        <div class="card-meta">
-          <span class="card-journal">PLOS Neglected Tropical Diseases</span>
-          <span class="card-dot"></span>
-          <span class="card-year">2019</span>
-        </div>
-        <div class="card-title">Prioritizing surveillance of Nipah virus in India</div>
-        <div class="card-description">Spatial epidemiology and surveillance prioritization following an unexpected outbreak.</div>
-      </div>
-    </a>
-
-  </div>
     </div>
   </div>
-
-
-  <!-- ======== SURVEILLANCE AND FORECASTING ======== -->
-
-  <div class="thematic-section">
-    <div class="thematic-box">
-      <div class="thematic-header">
-        <h3>Surveillance design and outbreak forecasting</h3>
-        <p>Predicting when and where pathogens will emerge means pulling signal out of long, noisy, often-pooled time-series. Whether the data are serological cohorts of wildlife, environmental samples, or clinical surveillance feeds, the underlying problem is the same: build models that flag high-risk windows before they become outbreaks. These papers develop and apply that toolkit.</p>
-      </div>
-      <div class="card-grid">
-
-        <a class="card" href="https://doi.org/10.1038/s41579-021-00652-2" target="_blank" rel="noopener">
-          <img class="card-image" src="images/41579_2021_652_Fig2_HTML.png" alt="Coronavirus spillover pathways figure">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Nature Reviews Microbiology</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2022</span>
-            </div>
-            <div class="card-title">Ecology, evolution and spillover of coronaviruses from bats</div>
-            <div class="card-description">Ruiz-Aravena M, McKee C, Gamber A, Maganga G, &hellip; <strong>Crowley DE</strong>, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://doi.org/10.1371/journal.pntd.0007393" target="_blank" rel="noopener">
-          <img class="card-image" src="images/pntd.0007393.g001.png" alt="Nipah surveillance map">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">PLOS Neglected Tropical Diseases</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2019</span>
-            </div>
-            <div class="card-title">Prioritizing surveillance of Nipah virus in India</div>
-            <div class="card-description"><strong>Crowley DE</strong>, Becker DJ, Washburne AD, Plowright RK, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://doi.org/10.21203/rs.3.rs-6263655/v1" target="_blank" rel="noopener">
-          <img class="card-image" src="images/vincent.png" alt="Hendra spatio-temporal dynamics">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Preprint</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2025</span>
-            </div>
-            <div class="card-title">Spatio-temporal dynamics of Hendra virus in Pteropus bats in Australia reveals high evolutionary diversity linked with spillover</div>
-            <div class="card-description">Munster V, Yinda CK, Eden JS, Prates E, Vlot A, Anzick S, Wang J, &hellip; <strong>Crowley DE</strong>, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://doi.org/10.1038/s41467-025-61521-7" target="_blank" rel="noopener">
-          <img class="card-image" src="images/ali_paper.webp" alt="Seasonal coronavirus excretion">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Nature Communications</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2025</span>
-            </div>
-            <div class="card-title">Synchronized seasonal excretion of multiple coronaviruses coincides with high rates of coinfection in immature bats</div>
-            <div class="card-description">Peel AJ, Ruiz-Aravena M, Kim K, Scherting B, Falvo CA, <strong>Crowley DE</strong>, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://www.science.org/doi/10.1126/sciadv.aea6654" target="_blank" rel="noopener">
-          <img class="card-image" src="images/sciadv.aea6654-f1.jpg" alt="Viral load shifts">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Science Advances</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2023</span>
-            </div>
-            <div class="card-title">Periodic shifts in viral load increase risk of spillover from bats</div>
-            <div class="card-description">Lunn TJ, Borremans B, Jones DN, Kessler MK, Dale AS, Yinda KC, &hellip; <strong>Crowley DE</strong>, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://nyaspubs.onlinelibrary.wiley.com/doi/10.1111/nyas.13910" target="_blank" rel="noopener">
-          <img class="card-image" src="images/nyas13910-gra-0001-m.jpg" alt="Changing resource landscapes">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Ann. NY Academy of Sciences</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2018</span>
-            </div>
-            <div class="card-title">Changing resource landscapes and spillover of henipaviruses</div>
-            <div class="card-description">Kessler MK, Becker DJ, Peel AJ, Justice NV, Lunn T, <strong>Crowley DE</strong>, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://doi.org/10.1111/1365-2656.70213" target="_blank" rel="noopener">
-          <img class="card-image" src="images/final_fig_1_cropped.png" alt="Pteropus bat with offspring">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Journal of Animal Ecology</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2025</span>
-            </div>
-            <div class="card-title">Cohorts of immature Pteropus bats show interannual variation in Hendra virus serology</div>
-            <div class="card-description"><strong>Crowley DE</strong>, Peel AJ, Becker DJ, et al.</div>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- ======== PREDICTIVE MODELING ======== -->
-
-  <div class="thematic-section">
-    <div class="thematic-box">
-      <div class="thematic-header">
-        <h3>Predictive modeling from ecological and genomic data</h3>
-        <p>Where should we look for the next emerging pathogen? Bringing machine-learning, phylogenetic, and graph-based methods to large ecological and trait datasets &mdash; predicting reservoir hosts and prioritizing where surveillance investment is most likely to pay off.</p>
-      </div>
-      <div class="card-grid">
-
-        <a class="card" href="https://doi.org/10.3390/vaccines8020228" target="_blank" rel="noopener">
-          <img class="card-image" src="images/ecm1353-fig-0004-m.jpg" alt="Reservoir phylogeny figure">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Vaccines</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2020</span>
-            </div>
-            <div class="card-title">Identifying Suspect Bat Reservoirs of Emerging Infections</div>
-            <div class="card-description"><strong>Crowley DE</strong>, Becker DJ, Washburne AD, Plowright RK.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://peerj.com/articles/5979/" target="_blank" rel="noopener">
-          <img class="card-image" src="images/fig-3-2x.jpg" alt="Taxonomic patterns figure">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">PeerJ</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2018</span>
-            </div>
-            <div class="card-title">Taxonomic patterns in the zoonotic potential of mammalian viruses</div>
-            <div class="card-description">Washburne AD, <strong>Crowley DE</strong>, Becker DJ, Olival KJ, Taylor M, Munster VJ, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://doi.org/10.1098/rsbl.2019.0423" target="_blank" rel="noopener">
-          <img class="card-image" src="images/rsbl20190423f01.png" alt="Surveillance limitations figure">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Biology Letters</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2019</span>
-            </div>
-            <div class="card-title">Temporal and spatial limitations in global surveillance for bat filoviruses and henipaviruses</div>
-            <div class="card-description">Becker DJ, <strong>Crowley DE</strong>, Washburne AD, Plowright RK.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://doi.org/10.3201/eid3107.241864" target="_blank" rel="noopener">
-          <img class="card-image" src="images/borrelia.jpg" alt="Borrelia in flying foxes">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Emerging Infectious Diseases</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2025</span>
-            </div>
-            <div class="card-title">Borrelia lineages adjacent to zoonotic clades in black flying foxes (Pteropus alecto), Australia, 2018&ndash;2020</div>
-            <div class="card-description">Verrett TB, Falvo CA, Benson E, Jones-Slobodian DN, <strong>Crowley DE</strong>, et al.</div>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </div>
-
-    <!-- ======== METHODS DEVELOPMENT ======== -->
-
-  <div class="thematic-section">
-    <div class="thematic-box">
-      <div class="thematic-header">
-        <h3>Statistical and computational methods development</h3>
-        <p>Real surveillance data is messy: pooled samples, sparse phylogenies, imperfect detection, heterogeneous platforms. Working with method-developers, I've contributed to tools that recover signal under those conditions &mdash; from phylogenetic graph-partitioning to Bayesian reconstruction of prevalence dynamics from pooled samples. The applications now extend well beyond what they were originally built for.</p>
-      </div>
-      <div class="card-grid">
-
-        <a class="card" href="https://doi.org/10.1002/ecm.1353" target="_blank" rel="noopener">
-          <img class="card-image" src="images/phylofactor_2.jpg" alt="Phylofactorization figure">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Ecological Monographs</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2019</span>
-            </div>
-            <div class="card-title">Phylofactorization: a graph partitioning algorithm to identify phylogenetic scales of ecological data</div>
-            <div class="card-description">Washburne AD, Silverman JD, Morton JT, Becker DJ, <strong>Crowley D</strong>, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://peercommunityjournal.org/articles/10.24072/pcjournal.455/" target="_blank" rel="noopener">
-          <img class="card-image" src="images/benny.png" alt="Prevalence dynamics reconstruction">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Peer Community Journal</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2024</span>
-            </div>
-            <div class="card-title">Reconstructing prevalence dynamics of wildlife pathogens from pooled and individual samples</div>
-            <div class="card-description">Borremans B, Falvo CA, <strong>Crowley DE</strong>, Hoegh A, Lloyd-Smith JO, Peel AJ, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://doi.org/10.1098/rstb.2018.0331" target="_blank" rel="noopener">
-          <img class="card-image" src="images/rstb20180331f01.png" alt="Percolation models figure">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Phil. Trans. Royal Society B</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2019</span>
-            </div>
-            <div class="card-title">Percolation models of pathogen spillover</div>
-            <div class="card-description">Washburne AD, <strong>Crowley DE</strong>, Becker DJ, Manlove KR, Childs ML, et al.</div>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </div>
-
-   <!-- ======== EXPERIMENTAL / NON-MODEL HOSTS ======== -->
-
-  <div class="thematic-section">
-    <div class="thematic-box">
-      <div class="thematic-header">
-        <h3>Experimental design and immunology in non-model systems</h3>
-        <p>Most of what we know about mammalian immunity comes from a handful of inbred laboratory species. The pathogens that drive pandemics emerge from animals we barely understand. Captive colonies (two of which I established) let us run controlled infection experiments and apply Bayesian models to high-throughput sequencing data, mechanistically testing how non-model hosts tolerate dangerous infections and what conditions push shedding higher.</p>
-      </div>
-      <div class="card-grid">
-
-        <a class="card" href="https://doi.org/10.1371/journal.pbio.3002800" target="_blank" rel="noopener">
-          <img class="card-image" src="images/journal.pbio.3002800.g001.PNG" alt="Antibody diversity figure">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">PLOS Biology</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2024</span>
-            </div>
-            <div class="card-title">Bats generate lower affinity but higher diversity antibody responses than those of mice, but pathogen-binding capacity increases if protein is restricted in their diet</div>
-            <div class="card-description"><strong>Crowley DE</strong>, Becker DJ, Washburne AD, Plowright RK, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://doi.org/10.1098/rspb.2024.2482" target="_blank" rel="noopener">
-          <img class="card-image" src="images/rspb.2024.2482.f001.png" alt="Diet and shedding figure">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Proceedings of the Royal Society B</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2025</span>
-            </div>
-            <div class="card-title">Diet-induced changes in metabolism influence immune response and viral shedding in Jamaican fruit bats</div>
-            <div class="card-description"><strong>Crowley DE</strong>, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://doi.org/10.1098/rspb.2025.0547" target="_blank" rel="noopener">
-          <img class="card-image" src="images/rspb.2025.0547.f001.png" alt="Diet composition and shedding">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Proceedings of the Royal Society B</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2025</span>
-            </div>
-            <div class="card-title">Diet composition affects bat viral shedding with potential consequences for pathogen spillover</div>
-            <div class="card-description">Vanalli C, Falvo C, <strong>Crowley D</strong>, Schwarz B, Plowright R, Hudson PJ, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://doi.org/10.1038/s41467-025-58305-4" target="_blank" rel="noopener">
-          <img class="card-image" src="images/van_tol.webp" alt="Filovirus competence">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Nature Communications</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2025</span>
-            </div>
-            <div class="card-title">Jamaican fruit bats' competence for Ebola but not Marburg virus is driven by intrinsic differences</div>
-            <div class="card-description">van Tol S, Port JR, Fischer RJ, Gallogly S, Bushmaker T, Griffin A, &hellip; <strong>Crowley DE</strong>, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://doi.org/10.1038/s41467-023-42610-x" target="_blank" rel="noopener">
-          <img class="card-image" src="images/41467_2023_42610_Fig2_HTML.webp" alt="Organoid antiviral response">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Nature Communications</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2023</span>
-            </div>
-            <div class="card-title">Antiviral responses in a Jamaican fruit bat intestinal organoid model of SARS-CoV-2 infection</div>
-            <div class="card-description">Hashimi M, Sebrell TA, Hedges JF, Snyder D, Lyon KN, Byrum SD, &hellip; <strong>Crowley DE</strong>, et al.</div>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </div>
-
-
-  <!-- ======== DECISION-SUPPORT FOR FEDERAL PARTNERS ======== -->
-
-  <div class="thematic-section">
-    <div class="thematic-box">
-      <div class="thematic-header">
-        <h3>Decision-support modeling for federal partners</h3>
-        <p>Endangered species share operational landscapes with the U.S. military, and disease &mdash; especially white-nose syndrome &mdash; compounds the problem. I built mechanistic and statistical models for DOD/DOE land managers, work that translated research into decision support and required ongoing technical communication with federal program officers.</p>
-      </div>
-      <div class="card-grid">
-
-        <a class="card" href="https://onlinelibrary.wiley.com/doi/10.1111/jbi.14130" target="_blank" rel="noopener">
-          <img class="card-image" src="images/Predicted-relative-probability-of-occurrence-of-a-Corynorhinus-townsendii-deviance.png" alt="Bat distribution model">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Journal of Biogeography</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2021</span>
-            </div>
-            <div class="card-title">A hybrid correlative&ndash;mechanistic approach for modeling winter distributions of North American bat species</div>
-            <div class="card-description">McClure ML, Haase CG, Hranac CR, Hayman DTS, Dickson BG, &hellip; <strong>Crowley D</strong>, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href=" https://doi.org/10.1002/ecs2.3274" target="_blank" rel="noopener">
-          <img class="card-image" src="images/ecs23274-fig-0004-m.jpg" alt="Subterranean climate figure">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Ecosphere</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2020</span>
-            </div>
-            <div class="card-title">Linking surface and subterranean climate: implications for the study of hibernating bats and other cave dwellers</div>
-            <div class="card-description">McClure ML, <strong>Crowley D</strong>, Haase CG, McGuire LP, Fuller NW, et al.</div>
-          </div>
-        </a>
-
-        <a class="card" href="https://apps.dtic.mil/sti/trecms/pdf/AD1189858.pdf" target="_blank" rel="noopener">
-          <img class="card-image" src="images/pteropus_alecto_australia_manuel_ruiz_aravena-1.jpg" alt="White-nose syndrome assessment">
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-journal">Report</span>
-              <span class="card-dot"></span>
-              <span class="card-year">2021</span>
-            </div>
-            <div class="card-title">Assessing White-nose Syndrome in the Context of Non-Stationary Conditions in an Advancing Continental Epidemic</div>
-            <div class="card-description">Olson SH, <strong>Crowley D</strong>, Dickson BG, Dzal YA, Fuller NW, Haase CG, et al.</div>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </div>
-
 
   <footer>
     <a href="https://github.com/dncrwlye" title="GitHub">
@@ -793,7 +343,7 @@
     <a href="https://bsky.app/profile/dancrowley.bsky.social" title="Bluesky">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.643 3.593 3.519 6.178 3.279-4.398.672-7.292 2.9-4.09 8.026C5.236 22.16 6.638 21.93 12 18c5.362 3.93 6.837 4.37 9.288.552 3.202-5.126.308-7.354-4.09-8.026 2.585.24 5.393-.636 6.178-3.279C23.622 9.419 24 4.458 24 3.768c0-.688-.139-1.86-.902-2.203-.659-.3-1.664-.62-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z"/></svg>
     </a>
-    <a href="https://www.linkedin.com/in/danielewingcrowley/" title="LinkedIn">
+    <a href="https://www.linkedin.com/in/danielewingcrowley" title="LinkedIn">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
     </a>
     <a href="https://orcid.org/0000-0003-4262-253X" title="ORCID">
